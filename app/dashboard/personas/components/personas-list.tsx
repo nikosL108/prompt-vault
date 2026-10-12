@@ -71,7 +71,7 @@ export function PersonasList({ personas }: PersonasListProps) {
                   <div className="flex gap-2 ml-4">
                     <CopyButton content={persona.system_prompt} title={persona.name} />
                     <EditPersonaModal persona={persona} />
-                    <DeletePersonaButton personaId={persona.id} personaName={persona.name} />
+                    <DeletePersonaButton personaId={persona.id} />
                   </div>
                 </div>
               </div>

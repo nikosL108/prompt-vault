@@ -111,7 +111,7 @@ export function PromptsList({ prompts }: PromptsListProps) {
                   <div className="flex gap-2 ml-4">
                     <CopyButton content={prompt.content} title={prompt.title} />
                     <EditPromptModal prompt={prompt} />
-                    <DeleteButton promptId={prompt.id} promptTitle={prompt.title} />
+                    <DeleteButton promptId={prompt.id} />
                   </div>
                 </div>
               </div>

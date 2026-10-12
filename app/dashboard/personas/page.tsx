@@ -3,6 +3,9 @@ import { PersonasFormModal } from './components/personas-form-modal';
 import { PersonasList } from './components/personas-list';
 import Link from 'next/link';
 
+// This page uses cookies() for authentication, so it must be dynamic
+export const dynamic = 'force-dynamic';
+
 /**
  * Personas Page
  *

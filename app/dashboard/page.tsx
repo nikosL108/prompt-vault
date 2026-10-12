@@ -3,6 +3,9 @@ import { PromptFormModal } from './components/prompt-form-modal';
 import { PromptsList } from './components/prompts-list';
 import Link from 'next/link';
 
+// This page uses cookies() for authentication, so it must be dynamic
+export const dynamic = 'force-dynamic';
+
 /**
  * Dashboard Page
  *

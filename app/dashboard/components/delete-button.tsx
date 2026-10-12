@@ -15,10 +15,9 @@ import { deletePrompt } from '../actions';
 
 interface DeleteButtonProps {
   promptId: string;
-  promptTitle: string;
 }
 
-export function DeleteButton({ promptId, promptTitle }: DeleteButtonProps) {
+export function DeleteButton({ promptId }: DeleteButtonProps) {
   const [showConfirm, setShowConfirm] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');

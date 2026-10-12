@@ -5,23 +5,20 @@ import { deletePersona } from '../actions';
 
 interface DeletePersonaButtonProps {
   personaId: string;
-  personaName: string;
 }
 
-export function DeletePersonaButton({ personaId, personaName }: DeletePersonaButtonProps) {
+export function DeletePersonaButton({ personaId }: DeletePersonaButtonProps) {
   const [showConfirm, setShowConfirm] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
 
   const handleDelete = async () => {
     setLoading(true);
-    setError('');
 
     const { error: deleteError } = await deletePersona(personaId);
 
     if (deleteError) {
-      setError(deleteError);
       setLoading(false);
+      return;
     }
   };
 
@@ -38,7 +35,6 @@ export function DeletePersonaButton({ personaId, personaName }: DeletePersonaBut
         <button
           onClick={() => {
             setShowConfirm(false);
-            setError('');
           }}
           disabled={loading}
           className="px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-700 rounded"
