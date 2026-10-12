@@ -2,6 +2,7 @@ import { getUserPrompts, getCurrentUser } from './actions';
 import { PromptFormModal } from './components/prompt-form-modal';
 import { PromptsList } from './components/prompts-list';
 import Link from 'next/link';
+import { LogoutButton } from '@/components/logout-button';
 
 // This page uses cookies() for authentication, so it must be dynamic
 export const dynamic = 'force-dynamic';
@@ -54,12 +55,7 @@ export default async function DashboardPage() {
                 AI Personas
               </Link>
             </div>
-            <Link
-              href="/auth/logout"
-              className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-md"
-            >
-              Sign Out
-            </Link>
+            <LogoutButton className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-md" />
           </div>
         </div>
       </header>
